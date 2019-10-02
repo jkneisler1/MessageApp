@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Message</title>
+</head>
+<body>
+    <h2>Message Form</h2>
+<form method="post">
+    <input type="hidden" th:field="*{id}" />
+    <input type="text" plactholder="Title" th.field="*{title}" />
+    <textarea roes="3" plactholder="description" th:field="*{description}"></textarea>
+    <input type="submit" value="Submit" />
+</form>
+</body>
+</html>

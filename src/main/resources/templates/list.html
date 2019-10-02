@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>List Page</title>
+</head>
+<body>
+    <h2>all Messages</h2>
+    <form th:action="@{/processsearch}" name="search" method="post">
+
+    </form>
+    <div th:each="message : ${messages}">
+        <p th:text="${message.title}"></p><br />
+        <p th:text="*{message.dateToString()"}></p><br />
+        <p th:text="${message.description}"></p><br />
+    </div>
+</body>
+</html>
